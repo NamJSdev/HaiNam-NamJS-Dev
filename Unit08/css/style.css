@@ -782,6 +782,14 @@ html{
     .main-contents-left {
         width: 100%;
     }
+    .comment img {
+        width: 10%;
+        height: 5%;
+        border-radius: 50%;
+    }
+    .comment .user-comment {
+        width: 82%;
+    }
     .main-contents-right {
         width: 100%;
     }
