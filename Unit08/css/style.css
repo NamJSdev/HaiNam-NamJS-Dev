@@ -144,7 +144,7 @@ html{
     text-decoration: none;
     color: var(--color-black);
 }
-.header-logo{
+.header-logo h1{
     font-size: 16pt;
 }
 .header-menu{
@@ -362,7 +362,7 @@ html{
     justify-content: center;
     align-items: center;
 }
-.infor-author h1{
+.infor-author h2{
     text-align: center;
 }
 .infor-author p{
@@ -762,6 +762,14 @@ html{
     .menu-phone:hover{
         display: block;
     }
+    .slider .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 75%;
+    }
     .slider h1 {
         font-size: 25pt;
     }
@@ -776,6 +784,10 @@ html{
     }
     .main-contents-right {
         width: 100%;
+    }
+    .main-contents-right {
+        display: flex;
+        justify-content: center;
     }
     .blog-category-extend {
         margin-top: 65px;
@@ -803,14 +815,22 @@ html{
         margin-top: 25px;
         height: 47%;
     }
-    .category-extend-items-top .container{
-        margin-left: 45px;
+    .category-extend-items-top .container {
+        margin-left: 32px;
     }
     .category-extend-items {
         display: block;
     }
     .blog-category-extend > .container{
         height: 1767px;
+    }
+    .category-extend-item .badge {
+        position: relative;
+        top: -546px;
+    }
+    .category-extend-items .badge {
+        position: relative;
+        top: -182px;
     }
     .blog-feedback .feedback-content {
         width: 83%;    
