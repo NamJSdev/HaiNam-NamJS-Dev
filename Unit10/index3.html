@@ -8,10 +8,11 @@
 </head>
 <body>
     <script>
+        var n,m,k;
         do{
-            var n = prompt('Nhập n:');
-            var m = prompt('Nhập m:');
-            var k = prompt('Nhập k:');
+            n = prompt('Nhập n:');
+            m = prompt('Nhập m:');
+            k = prompt('Nhập k:');
         }while(n<1 || k<1 || m<1 || isNaN(n,m,k) || m <= n){
             document.write('n= ' + n + '<br>' +'m= ' + m + '<br>' +'k= ' + k + '<br>');
             var sum = 0;
