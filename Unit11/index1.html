@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checking</title>
+    <style>
+        div:first-child{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        div:last-child{
+            text-align: center;
+        }
+        div label{
+            padding: 10px 100px;
+            font-size: 20px;
+            margin: 10px 0;
+            box-shadow: 2px 2px 0 0 rgb(0 0 0 / 20%);
+        }
+        div label:hover{
+            background-color: aqua;
+        }
+        button{
+            padding: 10px 20px;
+            border: inset;
+            border-color: #e79b0ee0;
+            color: white;
+            background-color: #e79b0ee0;
+
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <div>
+            <h1>Học lập trình tại Zent Coding School</h1>    
+            <label><input type="checkbox">Lorem ipsum dolor sit amet.</label>
+            <label><input type="checkbox">Lorem ipsum dolor sit amet.</label>
+            <label><input type="checkbox">Lorem ipsum dolor sit amet.</label>
+            <label><input type="checkbox">Lorem ipsum dolor sit amet.</label>
+            <label><input type="checkbox">Lorem ipsum dolor sit amet.</label>
+            <label><input type="checkbox">Lorem ipsum dolor sit amet.</label>
+            <label><input type="checkbox">Lorem ipsum dolor sit amet.</label>
+        </div>
+        <div>  
+            <button type="button" id="check__in">Check All</button>
+            <button type="button" id="check__out">UnCheck All</button>
+        </div>
+    </form>
+    <script>
+        var item = document.getElementsByTagName('label');
+        var checkAll = document.getElementById('check__in');
+        var UnCheckAll = document.getElementById('check__out');
+        //CheckAll
+        checkAll.onclick = function(){
+            var checkbox = document.getElementsByTagName('input');
+            for(var i = 0; i < checkbox.length; i++){
+                checkbox[i].checked = true;
+            }
+        };
+        //UnCheckAll
+        UnCheckAll.onclick = function(){
+            var checkbox = document.getElementsByTagName('input');
+            for(var i = 0; i < checkbox.length; i++){
+                checkbox[i].checked = false;
+            }
+        };
+        
+    </script>
+</body>
+</html>

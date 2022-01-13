@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thay đổi cỡ chữ</title>
+    <style>
+        div{
+            text-align: center;
+        }
+        button{
+            padding: 10px 20px;
+            border: none;
+            color: white;
+            background-color: #1a73e8;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>Cỡ chữ:</span>
+        <button class="option">Mặc định</button>
+        <button class="option">Chữ lớn</button>
+        <button class="option">Chữ nhỏ</button>
+        <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis adipisci autem cupiditate nulla laboriosam fugit nobis iure deleniti quas quae.</p>
+    </div>
+    <script>
+        const FONT_UNIT = 'px';
+        const SIZE_FONT = 16;
+        var textContent = document.getElementById('text');
+        var defaultFont = document.getElementsByClassName('option')[0];
+        var fontSizePlus = document.getElementsByClassName('option')[1];
+        var fontSizeReduction = document.getElementsByClassName('option')[2];
+        // Default setting
+        fnDefaultFont();
+        defaultFont.addEventListener('click',fnDefaultFont);
+        function fnDefaultFont(){
+            textContent.style.fontSize = SIZE_FONT + FONT_UNIT;
+        };
+        // Size Plus
+        fontSizePlus.addEventListener('click',fnSizePlus);
+        function fnSizePlus(){
+            var size = textContent.style.fontSize.split('px')[0];
+            textContent.style.fontSize = (size*1.4) + FONT_UNIT;
+        }
+        // Size Reduction
+        fontSizeReduction.addEventListener('click',fnSizeReduction);
+        function fnSizeReduction(){
+            var size = textContent.style.fontSize.split('px')[0];
+            textContent.style.fontSize = (size/1.6) + FONT_UNIT;
+        }
+        </script>
+</body>
+</html>
