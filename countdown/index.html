@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown năm mới 2022</title>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700&amp;subset=vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Đếm ngược đón Tết cùng NamJS</h1>
+    </div>
+    <div class="main__content">
+        <h2>Tết Nhâm Dần 2022 sắp đến !!!</h2>
+        <div class="clock__dow">
+            <div class="clock__item">
+                <div id="date" class="clock__number"></div>
+                <div class="clock__text">Ngày</div>
+            </div>
+            <div class="clock__item">
+                <div id="hour" class="clock__number"></div>
+                <div class="clock__text">Giờ</div>
+            </div>
+            <div class="clock__item">
+                <div id="minute" class="clock__number"></div>
+                <div class="clock__text">Phút</div>
+            </div>
+            <div class="clock__item">
+                <div id="second" class="clock__number"></div>
+                <div class="clock__text">Giây</div>
+            </div>
+        </div>
+        <h2>Đếm Ngược...</h2>
+    </div>
+    <script>
+        function countdown(){
+            var future = Date.parse('1 Feb 2022 00:00:00');
+            var now = new Date();
+            var diff = future - now;
+
+            // Tính ngày
+            var days = Math.floor(diff/(24*60*60*1000));
+            var hours = Math.floor(diff/(60*60*1000));
+            var minutes = Math.floor(diff/(60*1000));
+            var seconds = Math.floor(diff/(1000));
+
+            // Quy đổi hệ chuẩn
+            var d = days;
+            var h = hours%24;
+            var m = minutes%60;
+            var s = seconds%60;
+            document.getElementById('date').innerHTML = d;
+            document.getElementById('hour').innerHTML = h;
+            document.getElementById('minute').innerHTML = m;
+            document.getElementById('second').innerHTML = s;
+        }
+        setInterval(function(){
+            countdown()
+        },1000)
+    </script>
+</body>
+</html>

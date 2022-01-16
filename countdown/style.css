@@ -1,0 +1,69 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    background: rgb(247, 161, 161) url(./images/2.png) top center / cover no-repeat;
+}
+body{
+    font-size:1.6em;background:transparent;color:#ffffff;font-family: 'Dancing Script',Helvetica,Arial,sans-serif; background-size: cover;
+}
+.header{
+    position: absolute;
+    top: 0;
+    left: 25%;
+    right: 25%;
+    height: 65px;
+    width: 50%;
+    background-color: red;
+    border-radius: 2%;
+}
+.header h1{
+    text-align: center;
+}
+.main__content{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main__content h2{
+    font-size: 55px;
+    color: rgb(229, 245, 11);
+}
+.main__content .clock__dow{
+    display: flex;
+    margin: 50px 0;
+}
+.clock__dow .clock__item{
+    margin: 25px 25px;
+    width: 150px;
+    height: 200px;
+    border-radius: 30%;
+}
+.clock__item .clock__number{
+    background-color: #ffffffd7;
+    width: 100%;
+    height: 55%;
+    color: black;
+    font-size: 55px;
+    font-weight: bold;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+}
+.clock__item .clock__text{
+    color: black;
+    width: 100%;
+    height: 45%;
+    font-size: 45px;
+    font-weight: bold;
+    background-color: rgb(229, 245, 11);
+    border-bottom-left-radius: 80%;
+    border-bottom-right-radius: 80%;
+}
+.clock__number, .clock__text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
