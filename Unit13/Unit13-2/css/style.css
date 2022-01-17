@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    background: url(../images/1.png) top center / cover repeat;
+}
+#form__info{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+#form__info .form__items{
+    display: flex;
+    width: 75%;
+    height: 370px;
+    border: dashed 2px;
+    border-radius: 1%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(133, 219, 245, 0.411);
+}
+.form__item{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 0 20px;
+}
+.form__item .item__text{
+    width: 25%;
+    font-size: 16pt;
+    font-weight: bolder;
+}
+.form__item > input{
+    width: 50%;
+}
+.form__item .item__errol{
+    width: 25%;
+    padding: 5px 10px;
+    color: red;
+    font-weight: bolder;
+}
+.form__item > div{
+    width: 75%;
+}
+.form__btn{
+    margin: 20px 0;
+}
+input[type=text],input[type=password]{
+    height: 30px;
+    padding: 5px 10px;
+    border: none;
+}
+input[type=radio]{
+    margin-right: 10px;
+}
+.form__btn input{
+    width: 100px;
+    height: 30px;
+    background-color: rgba(34, 247, 247, 0.596);
+    border: none;
+    color: white;
+}
+label{
+    font-size: 16pt;
+    margin-right: 10px;
+}

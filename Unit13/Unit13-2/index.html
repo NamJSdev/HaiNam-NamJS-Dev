@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form đăng nhập</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <form action="">
+        <div id="form__info">
+            <div class="form__items">
+                <div class="form__item">
+                    <p class="item__text">Họ và tên</p>
+                    <input id="full-name" type="text" placeholder="Nhập họ và tên...">
+                    <p class="item__errol"></p>
+                </div>
+                <div class="form__item">
+                    <p class="item__text">Giới tính</p>
+                    <div>
+                        <label><input id="male" type="radio" name="male-female">Nam</label>
+                        <label><input id="female" type="radio" name="male-female">Nữ</label>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="form__item">
+                    <p class="item__text">Email</p>
+                    <input id="mail" type="text" placeholder="Nhập email...">
+                    <p class="item__errol"></p>
+                </div>
+                <div class="form__item">
+                    <p class="item__text">Số điện thoại</p>
+                    <input id="phone-number" type="text" placeholder="Nhập số điện thoại...">
+                    <p class="item__errol"></p>
+                </div>
+                <div class="form__item">
+                    <p class="item__text">Mật khẩu</p>
+                    <input id="password" type="password">
+                    <p class="item__errol"></p>
+                </div>
+                <div class="form__item">
+                    <p class="item__text">Xác nhận mật khẩu</p>
+                    <input id="password-confirm" type="password">
+                    <p class="item__errol"></p>
+                </div>
+            </div>
+            <div class="form__btn">
+                <input id="btn-login" type="submit">
+                <input type="reset" value="Xóa trắng">
+            </div>
+        </div>
+    </form>
+    <script src="./js/script.js"></script>
+</body>
+</html>
