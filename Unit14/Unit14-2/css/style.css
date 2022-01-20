@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Dosis:wght@200&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    background-color: rgba(26, 173, 241, 0.78);
+    font-family: 'Dongle', sans-serif;
+    font-family: 'Dosis', sans-serif;
+}
+.main{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    width: 75%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container h1{
+    color: aliceblue;
+    font-size: 30pt;
+}
+.accordion{
+    width: 100%;
+    background-color: rgba(15 29 92);
+    margin-top: 30px;
+}
+.accordion li{
+    list-style: none;
+    border: 0.5px solid #fff;
+    position: relative;
+    cursor: pointer;
+}
+.accordion li h3{
+    color: rgb(19, 235, 19);
+    height: 65px;
+    line-height: 65px;
+    padding-left: 30px;
+    font-size: 18pt;
+}
+.accordion li i{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(19, 235, 19);
+    color: #fff;
+    font-size: 15pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -10px;
+    top: 10px;
+    border: double;
+}
+.accordion__content{
+    border-top: 1px solid;
+    padding: 10px 30px;
+    color: aliceblue;
+    line-height: 16pt;
+    font-size: 14pt;
+    text-align: justify;
+    max-height: 300px;
+    overflow: auto;
+
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(14, 233, 87, 0.979); 
+ }
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(249, 253, 2); 
+}
