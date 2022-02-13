@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    //Menu mobile
     $(window).resize(function(){
         var viewportWidth = $(window).width();
         if(viewportWidth <= 767){
@@ -27,5 +28,18 @@ $(document).ready(function(){
                 }
             });
         }
+    });
+    // Back-to-top
+    $('.back-to-top').hide();
+    $('.back-to-top').click(function () {
+        $("html, body").animate({scrollTop: 0}, 500);
+     });
+    $(window).on('scroll',function(){
+        if($(this).scrollTop() > 100){
+            $('.back-to-top').fadeIn();
+        }else{
+            $('.back-to-top').fadeOut();
+        };
+
     });
 });

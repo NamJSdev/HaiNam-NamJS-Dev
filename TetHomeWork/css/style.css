@@ -1,8 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Roboto:wght@300&display=swap');
 :root{
     --color-while: #fff;
     --color-blue-text: rgba(27, 78, 245, 0.795);
     --color--black: black;
+    --color--text-second: rgba(41, 40, 40, 0.76);
+    --color--orange: orange;
+    --color--grey: rgba(201, 197, 197, 0.493);
 }
 *{
     padding: 0;
@@ -11,9 +14,11 @@
 }
 html{
     scroll-behavior: smooth;
-    /* overflow: hidden; */
+    font-family: 'Quicksand', sans-serif;
     font-family: 'Roboto', sans-serif;
-    font-family: 'Roboto Condensed', sans-serif;
+}
+.main{
+    position: relative;
 }
 /* common */
 .container{
@@ -25,14 +30,27 @@ html{
     flex-direction: column;
     padding: 0 10px;
     justify-content: space-between;
+    height: 42%;
+}
+.container-content h3{
+    font-size: 13pt;
 }
 .center{
     text-align: center;
 }
+.orange-color{
+    color: var(--color--orange);
+}
+.color-text-second{
+    color: var(--color--text-second);
+}
+.color-text-first{
+    color: var(--color-blue-text);
+}
 .strikethrough{
     width: 10%;
     height: 5px;
-    background-color: orange;
+    background-color: var(--color--orange);
 }
 .justify{
     display: flex;
@@ -49,10 +67,12 @@ html{
 .color-while-bgr{
     background-color: var(--color-while);
 }
-.btn{
+.btn {
     border: none;
     background-color: var(--color-blue-text);
     height: 30px;
+    width: 50%;
+    border-radius: 6px;
 }
 .btn > a{
     text-decoration: none;
@@ -67,7 +87,7 @@ html{
     justify-content: center;
     height: 25px;
     width: 100%;
-    background-color: rgba(201, 197, 197, 0.493);
+    background-color: var(--color--grey);
 }
 .header__contact .container{
     display: flex;
@@ -94,7 +114,7 @@ html{
 }
 .header__contact__menu li a{
     text-decoration: none;
-    color: black;
+    color: var(--color--text-second);
 }
 /* end */
 /* Header */
@@ -212,23 +232,37 @@ html{
     height: 200px;
     position: relative;
 }
+.content__value__slide h2, .content__value__slide p{
+    color: var(--color-while);
+    position: absolute;
+    left: 40%;
+    top: 55%;
+}
+.content__value__slide h2{
+    font-size: 23pt;
+    top: 30%;
+    text-transform: uppercase;
+}
 .content__value__slide button{
     position: absolute;
     right: 1px;
     bottom: 0px;
     border: none;
-    background-color: orange;
+    background-color: var(--color--orange);
     width: 120px;
     height: 30px;
 }
 .content__value__slide button a{
     text-decoration: none;
-    color: #fff;
+    color: var(--color-while);
 }
 /*end*/
 /* Booking */
 .content__booking{
     background-color: rgba(201, 197, 197, 0.493);
+}
+.content__booking a{
+    text-decoration: none;
 }
 .content__booking__items,.content__program__items,.content__solution__items{
     display: flex;
@@ -257,6 +291,10 @@ html{
     padding: 10px 10px;
     border-radius: 2%;
     align-items: center;
+    cursor: pointer;
+}
+.booking__option:hover{
+    box-shadow: inset 0px 0px 4px 0px;
 }
 .booking__option img{
     width: 15%;
@@ -282,8 +320,12 @@ html{
     flex-direction: column;
     justify-content: space-between;
 }
+.content__program__item:hover{
+    box-shadow: -2px 5px 8px 7px rgb(0 0 0 / 8%);
+}
 .content__program__item img{
     width: 100%;
+    height: 55%;
 }
 /*End*/
 /* content__solution */
@@ -299,7 +341,9 @@ html{
     position: relative;
     border: 2px solid;
     border-color: var(--color-while);
-
+}
+.content__solution__item:hover{
+    box-shadow: -2px 5px 8px 7px rgb(0 0 0 / 8%);
 }
 .content__solution img{
     position: absolute;
@@ -324,6 +368,8 @@ html{
     width: 100%;
     display: flex;
     align-content: space-between;
+    column-gap: 55px;
+    flex-wrap: wrap;
 }
 .footer__career__info{
     display: flex;
@@ -334,6 +380,18 @@ html{
     font-size: 25pt;
     font-weight: bold;
     color: var(--color-blue-text);
+}
+.footer__contact ul,.footer__career__info ul{
+    margin-top: 10px;
+    list-style: none;
+}
+.footer__contact ul li::before,.footer__career__info ul li::before{
+    content: "\2022";
+    color: var(--color-blue-text);
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
 }
 .footer__career h3, .footer__career ul li,.footer__contact h3,.footer__contact ul li,.footer__remote h3,.footer__sub h2{
     color: var(--color-while);
@@ -351,10 +409,254 @@ html{
     padding: 10px 10px;
     border-radius: 100px;
     background-color: var(--color--black);
+    font-size: 13pt;
+/* position-center */
     position: absolute;
     left: 50%;
     text-transform: uppercase;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+/* End */
+.back-to-top{
+    position: fixed;
+    right: 28px;
+    top: 87%;
+    color: var(--color-while);
+    background-color: var(--color-blue-text);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22pt;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 20;
+}
+.back-to-top:hover{
+    transition: background-color 0.3s;
+    background-color: var(--color--orange);
+}
+/* Message */
+.message{
+    position: fixed;
+    right: 10px;
+    top: 40%;
+    background-color: var(--color-blue-text);
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    padding: 10px 10px;
+    border-radius: 40px;
+    z-index: 20;
+    box-shadow: 0px 0px 8px 7px rgb(0 0 0 / 8%);
+}
+.message a{
+    text-decoration: none;
+    color: var(--color-while);
+    font-weight: bold;
+
+}
+/* end */
+/* Responsive */
+/* PC */
+@media( min-width : 64em){
+    .menu__phone{
+        display: none;
+    }
+}
+/* tablet */
+@media( max-width:1024px){
+    .menu__phone{
+        display: none;
+    }
+    .container{
+        width: 92%;
+    }
+    .contact__hotline {
+        width: 35%;
+    }
+    .header__contact__menu {
+        width: 65%;
+    }
+    .header__contact__menu li a {
+        font-size: 10pt;
+    }
+    .header__menu li a {
+        font-size: 10pt;
+    }
+    .header__logo {
+        width: 20%;
+    }
+    .header__menu {
+        width: 80%;
+    }
+    .content__value__slide {
+        width: 95%;
+    }
+    .slider__content {
+        top: 13%;
+    }
+    .content__value__items{
+        flex-wrap: wrap;
+    }
+    .content__value__item {
+        width: 47%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 10px;
+    }
+    .content__value__slide h2, .content__value__slide p {
+        color: var(--color-while);
+        position: absolute;
+        left: 34%;
+        top: 62%;
+    }
+    .content__value__slide h2 {
+        font-size: 23pt;
+        top: 22%;
+        text-transform: uppercase;
+    }
+    .content__booking__items, .content__program__items, .content__solution__items {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .content__booking__item {
+        width: 47%;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 10px;
+        background-color: var(--color-while);
+        border-radius: 8px;
+        row-gap: 20px;
+        padding: 10px 10px;
+    }
+    .content__program__item, .content__solution__item {
+        width: 47%;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .content__solution__item{
+        margin-top: 50px;
+    }
+    .footer__info {
+        column-gap: 50px;
+    }
+    .message{
+        width: 118px;
+    }
+}
+/* mobile */
+@media( max-width:767px){
+    .header__contact{
+        display: none;
+    }
+    .header .header__menu{
+        position: absolute;
+        top: 65px;
+        left: -200px;
+        background-color: var(--color-blue-text);
+        width: 200px;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        padding: 20px 10px;
+        height: 500px;
+    }
+    .header .header__menu > li a{
+        color: var(--color-while);
+        text-decoration: none;
+        font-size: 15pt;
+    }
+    .header .menu__phone{
+        display: block;
+        position: absolute;
+        right: 10px;
+    }
+    .menu__phone i{
+        font-size: 20pt;
+        color: var(--color-blue-text);
+    }
+    .slider {
+        width: 100%;
+        position: relative;
+    }
+    .slider img {
+        width: 100%;
+        height: 100px;
+    }
+    .slider__content {
+        position: absolute;
+        left: 25%;
+    }
+    .content__value__items{
+        flex-wrap: wrap;
+    }
+    .content__value__item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 10px;
+    }
+    .content__value__slide h2, .content__value__slide p {
+        color: var(--color-while);
+        position: absolute;
+        left: 15%;
+        top: 50%;
+    }
+    .content__value__slide h2 {
+        font-size: 16pt;
+        top: 20%;
+        text-transform: uppercase;
+    }
+    .content__booking__items, .content__program__items, .content__solution__items {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .content__booking__item {
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 10px;
+        background-color: var(--color-while);
+        border-radius: 8px;
+        row-gap: 20px;
+        padding: 10px 10px;
+    }
+    .content__program__item, .content__solution__item {
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .content__solution__item{
+        margin-top: 50px;
+    }
+    .footer__career h3, .footer__career ul li,.footer__contact h3,.footer__contact ul li,.footer__remote h3,.footer__sub h2{
+        color: var(--color-while);
+    }
+    .four{
+        width: calc(100%/2);
+    }
+    .footer__info {
+        column-gap: 0px;
+        padding: 0 10px;
+        row-gap: 10px;
+    }
 }
 /* End */
