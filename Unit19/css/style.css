@@ -1,0 +1,192 @@
+:root{
+    --color--green: #50c594;
+    --color--green-2: #a0eccdee;
+    --color--text: #a6a9c0;
+    --color--icon-bg-1: #5c64ab;
+    --color--icon-bg-2: #1abb9d;
+    --color--icon-bg-3: #6c757c;
+    --color--icon-bg-3: #273a5d;
+    --color--icon-bg-4: #db504b;
+    --color--icon-bg-5: #fbb70d;
+    --color--icon-bg-6: #273a5d;
+    --color--while: #fff;
+    --color--black: black;
+}
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Dosis:wght@200&family=Roboto:wght@300&display=swap');  
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Dongle', sans-serif;
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+/* Common */
+.btn{
+    background-color: var(--color--green);
+    color: var(--color--while);
+    font-weight: 600;
+}
+.btn:hover{
+    background-color: var(--color--while);
+    border: 1px solid;
+    border-color: var(--color--green);
+    color: var(--color--green);
+}
+.dot__container{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    column-gap: 20px;
+}
+.dot{
+    width: 5px;
+    height: 5px;;
+    background-color: var(--color--green-2);
+}
+.dot__active{
+    background-color: var(--color--green);
+    width: 20px;
+}
+.active{
+    display: block !important;
+}
+/* Heading */
+/* heading nav start */
+.heading{
+    background: url('../images/bgr-1.png') top center / cover no-repeat;
+}
+.heading__nav{
+    border-bottom: 1px solid;
+    border-color: var(--color--while);
+}
+.heading__nav .container{
+    display: flex;
+    max-height: 75px;
+    align-items: center;
+    justify-content: space-between;
+}
+.heading__logo{
+    width: 20%;
+}
+.heading__logo img{
+    height: 25px;
+}  
+.nav__menu{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+    margin-left: -23%;
+}
+.nav__menu li{
+    list-style: none;
+}
+.nav__menu a{
+    color: var(--color--text);
+    font-weight: bold;
+}
+.nav__menu a:hover{
+    transition: color 0.5s;
+    color: var(--color--green);
+}
+/* heading__content start */
+.heading__content{
+    position: relative;
+    margin-bottom: 10%;
+}
+.heading__content__info{
+    width: 30%;
+    margin-top: 8%;
+}
+.heading__content__info h1{
+    text-transform: capitalize;
+}
+.heading__content__info p{
+    color: var(--color--text);
+}
+.heading__content__image{
+    position: absolute;
+    right: 0;
+    top: -28%;
+}
+.heading__content__image img{
+    width: 75%;
+}
+.heading__content__icons{
+    display: flex;
+    padding: 0 3px;
+    column-gap: 10px;
+    margin: 20px 0;
+}
+.heading__content__icons i{
+    border: 1px solid;
+    border-color: var(--color--text);
+    width: 50px;
+    height: 50px;
+    font-size: 20pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+.heading__content__icons i:nth-child(1){
+    color: var(--color--icon-bg-6);
+}
+.heading__content__icons i:nth-child(2){
+    color: var(--color--icon-bg-4);
+}
+.heading__content__icons i:nth-child(3){
+    color: rgba(21, 21, 248, 0.877);
+}
+/* content__solution */
+.content__solution{
+
+}
+.content__solution .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.content__solution .container >p {
+    margin-bottom: 42px;
+}
+.content__solution h3{
+    font-size: 17pt;
+}
+.slide__solution__info .row{
+    column-gap: 30px;
+}
+.solution__info__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid;
+    border-color: var(--color--text);
+    aspect-ratio: 1;
+    padding: 60px 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.solution__info__item h4{
+    font-size: 13pt;
+}
+.solution__info__item p{
+    color: var(--color--text);
+}
+.solution__info__item i{
+    color: var(--color--text);
+    font-size: 30pt;
+}
+.solution__info__item p span{
+    font-weight: bold;
+    color: var(--color--black);
+}
+.slide{
+    display: none;
+}
