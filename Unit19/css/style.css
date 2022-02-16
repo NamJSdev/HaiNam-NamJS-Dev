@@ -194,14 +194,6 @@ html{
 .heading__content__info p{
     color: var(--color--text);
 }
-.heading__content__image{
-    position: absolute;
-    right: 0;
-    top: -28%;
-}
-.heading__content__image img{
-    width: 75%;
-}
 .heading__content__icons{
     display: flex;
     padding: 0 3px;
@@ -362,20 +354,20 @@ html{
     width: 2em;
     margin-left: -1em;
 }
-.content__pricing .col{
+.content__pricing .item{
     cursor: pointer;
     background-color: var(--color--while);
 }
 .content__pricing h2{
     font-size: 30pt;
 }
-.content__pricing .col:hover{
+.content__pricing .item:hover{
     background-color: var(--color--icon-bg-6);
 }
-.content__pricing .col:hover h2,.content__pricing .col:hover p:nth-child(1){
+.content__pricing .item:hover h2,.content__pricing .item:hover p:nth-child(1){
     color: var(--color--while);
 }
-.content__pricing .col:hover li{
+.content__pricing .item:hover li{
     color: var(--color--text);
 }
 .content__pricing li{
@@ -411,7 +403,7 @@ html{
 .content__joining .col:nth-child(2){
     padding: 50px;
 }
-.container-fluid{
+.trademark{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -481,4 +473,76 @@ iframe{
 .footer__end p{
     color: var(--color--text);
     margin-bottom: 0;
+}
+/* PC */
+@media( min-width : 1024px){
+    .menu__phone{
+        display: none;
+    }
+    .nav__menu__res{
+        display: none;
+    }
+}
+/* Tablet */
+@media( max-width:1023px){
+    .heading__nav{
+        position: relative;
+        height: 65px !important;
+        display: flex;
+    }
+    .heading__nav .menu__phone{
+        margin-right: 20px;
+        z-index: 10;
+    }
+    .heading__nav .menu__phone i{
+        font-size: 18pt;
+    }
+    .nav__menu,.nav__menu ~ button{
+        display: none;
+    }
+    .nav__menu__res{
+        background-color: var(--color--green);
+        position: absolute;
+        z-index: 20;
+        width: 30%;
+        top: 65px;
+        padding-left: 20px;
+        left: -400px;
+    }
+    .nav__menu__res li{
+        list-style: none;
+        margin: 20px 0;
+    }
+    .nav__menu__res button{
+        background-color: var(--color--while);
+        color: var(--color--green);
+        margin-bottom: 20px;
+    }
+    .nav__menu__res li a{
+        color: var(--color--while);
+    }
+    .content__features__image{
+        margin-bottom: 30px;
+    }
+    .gap-col-30{
+        column-gap: 0px;
+    }
+    .footer__map div {
+        width: 96%;
+    }
+}
+/* Mobile */
+@media( max-width:767px){
+    .nav__menu__res {
+        width: 50%;
+    }
+    .heading__logo {
+        width: 35%;
+    }
+    .heading__nav .menu__phone {
+        margin-right: 0px;
+    }
+    .footer__map div {
+        width: 93%;
+    }
 }

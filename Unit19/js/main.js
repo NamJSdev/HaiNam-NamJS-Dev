@@ -117,3 +117,16 @@ function validateEmail(email) {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }
+// menu_phone
+$(document).on('click','.menu__phone',function(){
+    if($(this).find('.fas').hasClass('fa-bars')){
+        $(this).find('.fas').removeClass('fa-bars').addClass('fa-times')
+        $('.nav__menu__res').css({'transition':'left 0.5s'})
+        $('.nav__menu__res').css({'left':'0px'})
+    }
+    else{
+        $(this).find('.fas').removeClass('fa-times').addClass('fa-bars')
+        $('.nav__menu__res').css({'transition':'left 0.5s'})
+        $('.nav__menu__res').css({'left':'-400px'})
+    }
+});
