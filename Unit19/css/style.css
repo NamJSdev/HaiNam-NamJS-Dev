@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Dosis:wght@200&family=Roboto:wght@300&display=swap');  
 :root{
     --color--green: #50c594;
     --color--green-2: #a0eccdee;
@@ -15,7 +16,6 @@
     --color--border: #f1f1f1;
     --color--bgr-map: rgba(151, 148, 148, 0.541);
 }
-@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Dosis:wght@200&family=Roboto:wght@300&display=swap');  
 *{
     padding: 0;
     margin: 0;
